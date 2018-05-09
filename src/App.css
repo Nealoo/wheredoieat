@@ -1,6 +1,6 @@
 .prize {
   width: 100%;
-  max-width: 480px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -45,12 +45,12 @@
   width: 90px;
   height: 90px;
   border-radius: 4px;
-  background-color: #f0f0f0;
+  background-color: #a1e9f2;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .row__item-active {
-  background-color: aquamarine;
+  background-color: #f6f352;
 }

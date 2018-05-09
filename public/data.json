@@ -1,0 +1,75 @@
+[
+  {
+    "index": 0,
+    "name": "KFC",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "Mc d",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "sushi",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "MALL",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "bad J",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "good chicken",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "eat shit",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "go home",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "bill on David",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "KFC",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "pizza hut",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  },{
+    "index": 0,
+    "name": "fish&chips",
+    "winTimes": 3,
+    "totalTimes": 10,
+    "isBlocked": false
+  }
+]
