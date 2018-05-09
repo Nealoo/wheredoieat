@@ -5,9 +5,11 @@ import './App.css';
 class RowItem extends Component {
   render() {
     const { content, activedId } = this.props;
+    const RowItemId = Object.keys(content)[0];
+
     return (
-      <div className={activedId === content ? 'row__item row__item-active' : 'row__item'} id={`row_item_${content}`}>
-        {content}
+      <div className={activedId == RowItemId ? 'row__item row__item-active' : 'row__item'} id={`row_item_${RowItemId}`}>
+        {Object.values(content)[0]}
       </div>
     )
   }
@@ -15,10 +17,11 @@ class RowItem extends Component {
 
 class App extends Component {
   constructor() {
-    super()
+    super();
+    console.log(this.getDataFromDB());
     this.state = {
       // 九宫格内容list
-      list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      list: [{0:'rest1'}, {1:'rest2'}, {2:'rest1'}, {3:'rest1'}, {4:'rest1'}, {5:'rest1'}, {6:'rest1'}, {7:'rest1'}, {8:'rest1'}, {9:'rest1'}, {10:'rest1'}, {11:'rest1'} ],
       // 被选中的格子的ID
       activedId: '',
       // 中奖ID
@@ -31,6 +34,90 @@ class App extends Component {
       isRolling: false
     }
   }
+
+  getDataFromDB(){
+    //get and transfer data
+    let rsData = [
+      {
+        index: 0,
+        name: 'KFC',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'Mc d',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'sushi',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'KFC',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'Mc d',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'sushi',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'KFC',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'Mc d',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'sushi',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'KFC',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'Mc d',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      },{
+        index: 0,
+        name: 'sushi',
+        winTimes: 3,
+        totalTimes: 10,
+        isBlocked: false
+      }
+    ];
+
+    rsData.map((item,index)=>item.index = index);
+
+    return rsData;
+  }
+
   handleBegin() {
     // this.state.isRolling为false的时候才能开始抽，不然会重复抽取，造成无法预知的后果
     if (!this.state.isRolling) {
