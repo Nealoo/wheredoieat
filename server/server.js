@@ -49,11 +49,25 @@ app.get('/',function(req,res){
 
 app.get('/data/update',function(req,res){
 
-  Restaurant.update({_id: req.query['id']}, {'$set': {winTimes: req.query['winTimes'], totalTimes: req.query['totalTimes']}}, function (err, doc) {
-    console.log(req.query['id']);
-    console.log(doc);
-  })
-  //res.json({text:'vale'});
+  let updateQuery = {}
+  if(req.query['winTimes']){
+    updateQuery.winTimes = req.query['winTimes']
+  }
+  if(req.query['totalTimes']){
+    updateQuery.totalTimes = req.query['totalTimes']
+  }
+  if(req.query['name']){
+    updateQuery.name = req.query['name']
+  }
+
+  if(JSON.stringify(updateQuery) != '{}'){
+    Restaurant.update({_id: req.query['id']}, {'$set': updateQuery}, function (err, doc) {
+      console.log(req.query['id']);
+      console.log(doc);
+    })
+  }
+
+  res.json({text:'vale'});
 })
 
 app.get('/data/get',function(req,res){

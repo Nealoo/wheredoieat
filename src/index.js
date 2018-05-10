@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { App, TechList } from './App';
+import { App } from './App';
+import { TechList } from './TechList';
+import { DataManage } from './DataManage';
 import registerServiceWorker from './registerServiceWorker';
 
 import { Layout, Menu, Tabs } from 'antd';
@@ -32,7 +34,7 @@ ReactDOM.render((
             <App />
           </TabPane>
           <TabPane tab="enter restaurant data" key="3">
-            <App />
+            <DataManage />
           </TabPane>
         </Tabs>
       </div>
